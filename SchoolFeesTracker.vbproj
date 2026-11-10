@@ -1,0 +1,76 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RootNamespace>SchoolFeesTracker</RootNamespace>
+    <AssemblyName>SchoolFeesTracker</AssemblyName>
+    <UseWindowsForms>true</UseWindowsForms>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <StartupObject>Sub Main</StartupObject>
+    <OptionStrict>Off</OptionStrict>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionInfer>On</OptionInfer>
+    <Nullable>disable</Nullable>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.IO" />
+    <Import Include="System.Text" />
+    <Import Include="System.Data" />
+    <Import Include="System.Security.Cryptography" />
+    <Import Include="System.Drawing.Printing" />
+    <Import Include="Microsoft.Data.Sqlite" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="LoginForm.vb"><SubType>Form</SubType></Compile>
+    <Compile Update="LoginForm.Designer.vb"><DependentUpon>LoginForm.vb</DependentUpon></Compile>
+    <EmbeddedResource Update="LoginForm.resx"><DependentUpon>LoginForm.vb</DependentUpon></EmbeddedResource>
+    <Compile Update="ChangePasswordForm.vb"><SubType>Form</SubType></Compile>
+    <Compile Update="ChangePasswordForm.Designer.vb"><DependentUpon>ChangePasswordForm.vb</DependentUpon></Compile>
+    <EmbeddedResource Update="ChangePasswordForm.resx"><DependentUpon>ChangePasswordForm.vb</DependentUpon></EmbeddedResource>
+    <Compile Update="MainForm.vb"><SubType>Form</SubType></Compile>
+    <Compile Update="MainForm.Designer.vb"><DependentUpon>MainForm.vb</DependentUpon></Compile>
+    <EmbeddedResource Update="MainForm.resx"><DependentUpon>MainForm.vb</DependentUpon></EmbeddedResource>
+    <Compile Update="StudentDialog.vb"><SubType>Form</SubType></Compile>
+    <Compile Update="StudentDialog.Designer.vb"><DependentUpon>StudentDialog.vb</DependentUpon></Compile>
+    <EmbeddedResource Update="StudentDialog.resx"><DependentUpon>StudentDialog.vb</DependentUpon></EmbeddedResource>
+    <Compile Update="ReasonDialog.vb"><SubType>Form</SubType></Compile>
+    <Compile Update="ReasonDialog.Designer.vb"><DependentUpon>ReasonDialog.vb</DependentUpon></Compile>
+    <EmbeddedResource Update="ReasonDialog.resx"><DependentUpon>ReasonDialog.vb</DependentUpon></EmbeddedResource>
+    <Compile Update="UserDialog.vb"><SubType>Form</SubType></Compile>
+    <Compile Update="UserDialog.Designer.vb"><DependentUpon>UserDialog.vb</DependentUpon></Compile>
+    <EmbeddedResource Update="UserDialog.resx"><DependentUpon>UserDialog.vb</DependentUpon></EmbeddedResource>
+    <Compile Update="StudentsView.vb"><SubType>UserControl</SubType></Compile>
+    <Compile Update="StudentsView.Designer.vb"><DependentUpon>StudentsView.vb</DependentUpon></Compile>
+    <EmbeddedResource Update="StudentsView.resx"><DependentUpon>StudentsView.vb</DependentUpon></EmbeddedResource>
+    <Compile Update="AdminDashboard.vb"><SubType>UserControl</SubType></Compile>
+    <Compile Update="AdminDashboard.Designer.vb"><DependentUpon>AdminDashboard.vb</DependentUpon></Compile>
+    <EmbeddedResource Update="AdminDashboard.resx"><DependentUpon>AdminDashboard.vb</DependentUpon></EmbeddedResource>
+    <Compile Update="UserDashboard.vb"><SubType>UserControl</SubType></Compile>
+    <Compile Update="UserDashboard.Designer.vb"><DependentUpon>UserDashboard.vb</DependentUpon></Compile>
+    <EmbeddedResource Update="UserDashboard.resx"><DependentUpon>UserDashboard.vb</DependentUpon></EmbeddedResource>
+    <Compile Update="AuditView.vb"><SubType>UserControl</SubType></Compile>
+    <Compile Update="AuditView.Designer.vb"><DependentUpon>AuditView.vb</DependentUpon></Compile>
+    <EmbeddedResource Update="AuditView.resx"><DependentUpon>AuditView.vb</DependentUpon></EmbeddedResource>
+    <Compile Update="UsersView.vb"><SubType>UserControl</SubType></Compile>
+    <Compile Update="UsersView.Designer.vb"><DependentUpon>UsersView.vb</DependentUpon></Compile>
+    <EmbeddedResource Update="UsersView.resx"><DependentUpon>UsersView.vb</DependentUpon></EmbeddedResource>
+    <Compile Update="FeesView.vb"><SubType>UserControl</SubType></Compile>
+    <Compile Update="FeesView.Designer.vb"><DependentUpon>FeesView.vb</DependentUpon></Compile>
+    <EmbeddedResource Update="FeesView.resx"><DependentUpon>FeesView.vb</DependentUpon></EmbeddedResource>
+    <Compile Update="PaymentsView.vb"><SubType>UserControl</SubType></Compile>
+    <Compile Update="PaymentsView.Designer.vb"><DependentUpon>PaymentsView.vb</DependentUpon></Compile>
+    <EmbeddedResource Update="PaymentsView.resx"><DependentUpon>PaymentsView.vb</DependentUpon></EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AllocationDialog.vb"><SubType>Form</SubType></Compile>
+    <Compile Update="AllocationDialog.Designer.vb"><DependentUpon>AllocationDialog.vb</DependentUpon></Compile>
+    <EmbeddedResource Update="AllocationDialog.resx"><DependentUpon>AllocationDialog.vb</DependentUpon></EmbeddedResource>
+  </ItemGroup>
+</Project>
